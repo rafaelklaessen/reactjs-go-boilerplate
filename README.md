@@ -22,10 +22,12 @@ NPM:
 
 ## Run
 Run Webpack:
-`webpack -d --watch`
+
+`yarn dev` or `npm run dev`
 
 Make a Webpack production build:
-`webpack -p`
+
+`yarn build` or `npm run build`
 
 Start the Go server:
 `go main.go`
