@@ -1,37 +1,14 @@
-var webpack = require('webpack');
-var path = require('path');
-
+const path = require('path');
 module.exports = {
-	evtool: 'eval',
-	entry: [
-		'webpack-dev-server/client?http://localhost:3000',
-		'webpack/hot/only-dev-server',
-		"./public/entry.js"
-	],
-	output: {
-		path: path.join(__dirname, 'public'),
-		filename: "bundle.js",
-		publicPath: "/-/"
-	},
-	module: {
-		loaders: [
-			{test: /\.css$/, loader: "style!css"},
-			{
-				test: /\.jsx$/, 
-				loaders: ['react-hot', 'babel'],
-				include: [path.join(__dirname, 'public')]
-			}
-		]
-	},
-	plugins: [
-		new webpack.HotModuleReplacementPlugin(),
-		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery",
-			"window.jQuery": "jquery"
-		})
-    ],
-	resolve: {
-		extensions: ['', '.js', 'jsx']
-	}
+  entry: './public/entry.js',
+  output: {
+		path: path.resolve(__dirname, 'dist'),
+		filename: "bundle.js"
+  },
+  module: {
+    loaders: [
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+    ]
+  }
 }

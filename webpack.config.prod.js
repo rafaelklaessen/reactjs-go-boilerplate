@@ -4,6 +4,8 @@ var path = require('path');
 module.exports = {
 	evtool: 'eval',
 	entry: [
+		'webpack-dev-server/client?http://localhost:3000',
+		'webpack/hot/only-dev-server',
 		"./public/entry.js"
 	],
 	output: {
@@ -12,12 +14,11 @@ module.exports = {
 		publicPath: "/-/"
 	},
 	module: {
-		loaders: [
-			{test: /\.css$/, loader: "style!css"},
+		rules: [
 			{
-				test: /\.jsx$/, 
-				loaders: ['babel'],
-				include: [path.join(__dirname, 'public')]
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				use: ['babel-loader', 'react-hot-loader']
 			}
 		]
 	},
@@ -28,8 +29,8 @@ module.exports = {
 			jQuery: "jquery",
 			"window.jQuery": "jquery"
 		})
-    ],
+	],
 	resolve: {
-		extensions: ['', '.js', 'jsx']
+		extensions: ['.js', 'jsx']
 	}
 }
