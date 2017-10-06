@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"io"
 	"log"
 	"net/http"
 	"strconv"
@@ -33,19 +32,7 @@ func initRouters() {
 	m.Get("/", func(ctx *macaron.Context) {
 		ctx.HTML(200, "homepage", nil)
 	})
-
-	ReloadProxy := func(w http.ResponseWriter, r *http.Request) {
-		log.Println("Debug, Hot reload", r.Host)
-		resp, err := http.Get("http://localhost:3000" + r.RequestURI)
-		if err != nil {
-			http.Error(w, err.Error(), 500)
-			return
-		}
-		defer resp.Body.Close()
-		io.Copy(w, resp.Body)
-	}
-	m.Get("/-/:rand(.*).hot-update.:ext(.*)", ReloadProxy)
-	m.Get("/-/bundle.js", ReloadProxy)
+	m.Use(macaron.Static("dist"))
 }
 
 func main() {
