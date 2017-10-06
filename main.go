@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 	"strconv"
-	"gopkg.in/macaron.v1"
 	"./modules"
+	"gopkg.in/macaron.v1"
 )
 
 type Configure struct {
@@ -21,7 +21,7 @@ var m *macaron.Macaron
 
 func init() {
 	m = macaron.Classic()
-	m.Use(modules.Public)
+//	m.Use(modules.Public)
 	m.Use(modules.Renderer)
 
 	flag.IntVar(&gcfg.port, "port", 8000, "Which port to listen")
