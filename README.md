@@ -1,33 +1,31 @@
-# go-reactjs-example
-This is an exmple web use Golang([macaron](https://github.com/Unknwon/macaron)) And ReactJS
+# reactjs-go-boilerplate
 
-A real world project use go and reactjs. example: [file-server](https://github.com/codeskyblue/file-server)
+A ReactJS + Go + Webpack 3 boilerplate.
 
-## Build
-Suggest install node through [nvm](https://github.com/creationix/nvm)
+## Requirements
+- Golang installed
+- NodeJS & npm installed
+- (optionally) Yarn installed
 
-	npm install -g webpack
-	npm install
-	make prod
+## Setup
+Yarn:
 
-### Develop
-Your need to know what is react, and golang.
-In develop mode, Support react hot reload
+`yarn global add webpack`
 
-	npm install
-	make dev
+`yarn install`
 
-Open another terminal
+NPM:
 
-	go run main.go
+`npm install -g webpack`
 
-Open browser, navgate to <http://localhost:8000>
+`npm install`
 
-Edit file `public/HelloWorld.jsx` Can see live change.
+## Run
+Run Webpack:
+`webpack -d --watch`
 
-Good luck. ^0^
+Make a Webpack production build:
+`webpack -p`
 
-## Thanks
-1. <http://segmentfault.com/a/1190000002551952>
-1. [update package.json dependencies](http://stackoverflow.com/questions/16073603/how-do-i-update-each-dependency-in-package-json-to-the-latest-version)
-1. [react hot reload QA](https://github.com/gaearon/react-hot-loader/blob/master/docs/Troubleshooting.md)
+Start the Go server:
+`go main.go`
