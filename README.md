@@ -32,5 +32,16 @@ Make a Webpack production build:
 Start the Go server:
 `go main.go`
 
+## Learn more
+[Webpack](https://webpack.js.org/)
+
+[Webpack config documentation](https://webpack.js.org/concepts/)
+
+[ReactJS](https://reactjs.org/)
+
+[Macaron](https://go-macaron.com/)
+
+[Go](https://golang.org/)
+
 ## Credits
 This project is based on [codeskyblue/go-reactjs-example](https://github.com/codeskyblue/go-reactjs-example)
