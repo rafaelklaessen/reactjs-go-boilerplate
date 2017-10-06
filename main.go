@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"fmt"
 	"net/http"
 	"gopkg.in/macaron.v1"
 )
@@ -19,6 +20,8 @@ func main() {
 	m.Use(macaron.Static("dist"))
 
 	http.Handle("/", m)
+
+	fmt.Println("listening on localhost:8000")
 
 	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
