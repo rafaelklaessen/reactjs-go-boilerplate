@@ -1,6 +1,10 @@
 {
-  "author": "codeskyblue@gmail.com",
+  "author": "Rafael Klaessen",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelklaessen/reactjs-go-boilerplate.git"
+  },
   "scripts": {
     "dev": "webpack -d --watch",
     "build": "webpack -p"
