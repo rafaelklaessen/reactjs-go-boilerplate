@@ -31,3 +31,6 @@ Make a Webpack production build:
 
 Start the Go server:
 `go main.go`
+
+## Credits
+This project is based on [codeskyblue/go-reactjs-example](https://github.com/codeskyblue/go-reactjs-example)
