@@ -3,9 +3,9 @@
 package modules
 
 import (
-	"github.com/Unknwon/macaron"
-	"github.com/codeskyblue/go-reactjs-example/public"
-	"github.com/codeskyblue/go-reactjs-example/templates"
+	"gopkg.in/macaron.v1"
+	"../public"
+	"../templates"
 	"github.com/macaron-contrib/bindata"
 )
 

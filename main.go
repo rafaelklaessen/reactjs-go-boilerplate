@@ -6,9 +6,8 @@ import (
 	"log"
 	"net/http"
 	"strconv"
-
-	"github.com/go-macaron/macaron"
-	"github.com/codeskyblue/go-reactjs-example/modules"
+	"gopkg.in/macaron.v1"
+	"./modules"
 )
 
 type Configure struct {
