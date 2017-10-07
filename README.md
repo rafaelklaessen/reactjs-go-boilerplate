@@ -3,7 +3,7 @@
 A ReactJS + Go + Webpack 3 boilerplate.
 
 ## Requirements
-- Golang installed
+- Go installed
 - NodeJS & npm installed
 - (optionally) Yarn installed
 
@@ -20,6 +20,10 @@ NPM:
 
 `npm install`
 
+Install the Macaron web framework:
+
+`go get gopkg.in/macaron.v1`
+
 ## Run
 Run Webpack:
 
@@ -30,7 +34,7 @@ Make a Webpack production build:
 `yarn build` or `npm run build`
 
 Start the Go server:
-`go main.go`
+`go server.go`
 
 ## Learn more
 [Webpack](https://webpack.js.org/)
